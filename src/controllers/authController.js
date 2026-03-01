@@ -28,7 +28,7 @@ exports.adminLogin = async (req, res) => {
 };
 
 exports.register = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password } = req.body || {};
     if (!name || !email || !password) return res.status(400).json({ message: 'Name, email, and password required' });
 
     try {
