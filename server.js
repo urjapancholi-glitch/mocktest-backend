@@ -12,10 +12,7 @@ const userRoutes = require('./src/routes/userRoutes');
 const app = express();
 
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://mocktest-frontend-po4y.vercel.app"
-    ],
+    origin: "*",
     credentials: true
 }));
 
